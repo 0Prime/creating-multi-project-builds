@@ -1,0 +1,15 @@
+plugins {
+	id 'java'
+}
+
+
+apply plugin: 'war'
+apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+
+
+dependencies {
+	compile 'javax.servlet:javax.servlet-api:4.0.1'
+	compile 'org.springframework:spring-webmvc:5.0.8.RELEASE'
+
+	compile project(':greeting-library')
+}
