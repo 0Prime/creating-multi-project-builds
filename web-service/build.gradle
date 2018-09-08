@@ -10,6 +10,7 @@ apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScr
 dependencies {
 	compile 'javax.servlet:javax.servlet-api:4.0.1'
 	compile 'org.springframework:spring-webmvc:5.0.8.RELEASE'
+	compile 'org.slf4j:slf4j-api:1.7.25'
 
 	compile project(':greeting-library')
 }
