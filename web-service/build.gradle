@@ -12,5 +12,12 @@ dependencies {
 	compile 'org.springframework:spring-webmvc:5.0.8.RELEASE'
 	compile 'org.slf4j:slf4j-api:1.7.25'
 
+	testCompile 'org.apache.commons:commons-lang3:3.4'
+	testCompile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+
 	compile project(':greeting-library')
 }
+
+
+test.dependsOn('appBeforeIntegrationTest')
+test.finalizedBy('appAfterIntegrationTest')
