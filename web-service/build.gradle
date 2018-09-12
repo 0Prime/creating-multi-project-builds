@@ -19,5 +19,5 @@ dependencies {
 }
 
 
-test.dependsOn('appBeforeIntegrationTest')
-test.finalizedBy('appAfterIntegrationTest')
+test.dependsOn 'appBeforeIntegrationTest'
+test.finalizedBy 'appAfterIntegrationTest'
