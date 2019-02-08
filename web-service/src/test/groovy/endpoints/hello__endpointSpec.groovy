@@ -12,7 +12,7 @@ class hello__endpointSpec extends Specification {
 			final restClient = new RESTClient('http://localhost:8080/web-service/')
 
 		when: 'calling endpoint'
-			final response = restClient.get([path: 'hello', query: [name: name]]) as HttpResponseDecorator
+			final response = restClient.get(path: 'hello', query: [name: name]) as HttpResponseDecorator
 			final actual = (response.getData() as StringReader).text
 
 		then: 'expecting correct result'
