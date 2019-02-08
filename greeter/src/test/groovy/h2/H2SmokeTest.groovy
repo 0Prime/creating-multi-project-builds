@@ -2,6 +2,7 @@ package h2
 
 import org.apache.commons.io.FileUtils
 import spock.lang.Specification
+import tools.PropertyReader
 
 import java.sql.*
 
@@ -21,7 +22,7 @@ class H2SmokeTest extends Specification {
 	}
 
 
-	final static pathToDB = './src/test/resources/h2_db'
+	final static pathToDB = PropertyReader.read('/properties/test-db.properties', 'path') as String
 
 
 	def h2Init() {
